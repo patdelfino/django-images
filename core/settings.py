@@ -33,6 +33,7 @@ SECRET_KEY = os.getenv('d458e0cd602bcc084ee3b08382356132')
 DEBUG = os.getenv('DEBUG', '0').lower() in ['true', 't', '1']
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
+ALLOWED_HOSTS.append('django-images-6qex.onrender.com')
 
 
 # Application definition
