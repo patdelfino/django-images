@@ -27,13 +27,13 @@ load_dotenv(BASE_DIR / '.env')
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('b425693c26e8e0c09e64303365bf7385')
+SECRET_KEY = os.getenv('jns!fz%&53qr+-kgcnv@=q1+t6y!b%g8u@!vjqk^x4dp99@!k2')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', '0').lower() in ['true', 't', '1']
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
-ALLOWED_HOSTS.append('django-images-6qex.onrender.com')
+ALLOWED_HOSTS.append('django-images-1.onrender.com')
 
 
 # Application definition
