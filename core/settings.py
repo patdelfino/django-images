@@ -94,8 +94,12 @@ if DATABASE_URL.startswith('postgresql://'):
     DATABASE_URL = DATABASE_URL.replace('postgresql://', 'postgres://', 1)
 
 DATABASES = {
-    'default': dj_database_url.parse(DATABASE_URL, conn_max_age=600),
+    'default': dj_database_url.config( 
+     default='postgresql://django_images_4u6z_user:dyOcabOIxEgX6YtAi4SfpOOKSWjDpFwN@dpg-d05r71er433s73dv88kg-a/django_images_4u6z', 
+    conn_max_age=600
+    )
 }
+
 
 
 # Password validation
