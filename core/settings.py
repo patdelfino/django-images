@@ -89,10 +89,13 @@ DATABASE_URL = os.getenv('DATABASE_URL')
 if not DATABASE_URL:
     raise Exception('DATABASE_URL environment variable not set')
 
+# Patch: convert postgresql:// to postgres:// for dj-database-url compatibility
+if DATABASE_URL.startswith('postgresql://'):
+    DATABASE_URL = DATABASE_URL.replace('postgresql://', 'postgres://', 1)
+
 DATABASES = {
     'default': dj_database_url.parse(DATABASE_URL, conn_max_age=600),
 }
-
 
 
 # Password validation
